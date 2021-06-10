@@ -8,7 +8,7 @@
 
 * On the left sidebar in Remix IDE, choose the option to Deploy the Smart Contract. 
 
-* Choose the environment as *Javascript VM* , Account as the top account in drop down menu (will be our owner) ,contract as Loan-loan.sol and then click on *Deploy*.
+* Choose the environment as *Javascript VM* , Account as the top account(call it, account 1) in drop down menu (will be our owner) ,contract as Loan-loan.sol and then click on *Deploy*.
 
 ### Getting the compound interest
 
@@ -21,7 +21,7 @@
 
 * Click on the reqLoan button after providing the values of principle, interest, time as integers and click on transact.
 
-* This would Emit a Request event and add the amount in the loans mapping of the contract owner i.e. account 1.
+* This would emit a Request event and add the amount in the loans mapping of the contract owner i.e. account 1.
 
 ### Getting owner's balance
 
