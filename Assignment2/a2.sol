@@ -67,7 +67,7 @@ contract Loan is MetaCoin {
         for (uint256 i = 0; i < time; i++)
             principle += (principle * rate) / 100;
         uint256 interest = principle - og_principle;
-        return interest
+        return interest;
     }
 
     function reqLoan(
