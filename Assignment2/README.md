@@ -23,7 +23,7 @@
 
 * This would emit a Request event and add the amount in the loans mapping of the contract owner i.e. account 1.
 
-### Getting owner's balance
+### Getting the owner's balance
 
 * First select any account from the Account drop down menu.
 
@@ -31,7 +31,7 @@
 
 * It will display the owner's current account balance.
 
-### Viewing dues
+### View dues
 
 * First select account 1 from the menu because only the owner of contract can use this function.
 
@@ -39,7 +39,7 @@
 
 * Click on call and you will get the amount of money you owe to that account.
 
-### Settling dues
+### Settle dues
 
 * First select account 1 from the menu because only the owner of contract can use this function.
 
