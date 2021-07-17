@@ -49,13 +49,13 @@ contract Loan is MetaCoin {
     address private Owner;
 
     modifier isOwner() {
-        require(msg.sender == owner, "Caller is not owner"); // using the global variable msg.sender to validate
+        require(msg.sender == Owner, "Caller is not owner"); // using the global variable msg.sender to validate
         _;
     }
 
     constructor() public {
-        owner = msg.sender; // 'msg.sender' is sender of current call, contract deployer for a constructor
-        emit OwnerSet(address(0), owner);
+        Owner = msg.sender; // 'msg.sender' is sender of current call, contract deployer for a constructor
+        emit OwnerSet(address(0), Owner);
     }
 
     function getCompoundInterest(
