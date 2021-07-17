@@ -59,3 +59,4 @@
 * Now, chairperson will close the voting period by clicking on closeVotingPeriod button 
 * And he will start the counting by clicking on the Count button, which will count the votes and return the list of the selected candidates. 
 
+
