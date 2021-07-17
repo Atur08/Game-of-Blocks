@@ -42,34 +42,8 @@ contract BlockVoting {
         seats = seat;
     }
 
-
-    function RequestVotingRights() public {
-        require(period == 1, "Voter Registration period is over");
-        uint256 t = 0;
-        address curr = msg.sender;
-        for (uint256 i = 0; i < VoterRequests.length; i++) {
-            if (VoterRequests[i] == curr) {
-                t = 1;
-                break;
-            }
-        }
-        require(
-            t == 0,
-            "Already Requested."
-        );
-        VoterRequests.push(msg.sender);
-    }
-
-    function ApproveVoters() public isChairperson {
-        require(period == 2, "Candidate Registration period must be over");
-        for (uint256 i = 0; i < VoterRequests.length; i++) {
-            voterAddr.push(VoterRequests[i]);
-            voters[voterAddr[i]].vote = 0;
-            
-            for ( uint256 j=0;j<candidates_count;j++ ){
-                voters[voterAddr[i]].voted.push(false);
-            }
-        }
+    function CheckNumberOfSeats() public view returns (uint256) {
+        return seats;
     }
 
     function RequestCandidature() public {
@@ -92,6 +66,24 @@ contract BlockVoting {
         
     }
 
+
+    function RequestVotingRights() public {
+        require(period == 1, "Voter Registration period is over");
+        uint256 t = 0;
+        address curr = msg.sender;
+        for (uint256 i = 0; i < VoterRequests.length; i++) {
+            if (VoterRequests[i] == curr) {
+                t = 1;
+                break;
+            }
+        }
+        require(
+            t == 0,
+            "Already Requested."
+        );
+        VoterRequests.push(msg.sender);
+    }
+
     function ApproveCandidature() public isChairperson {
         require(period == 1, "Voter Registration period is over");
         for (uint256 i = 0; i < CandidateRequests.length; i++) {
@@ -102,26 +94,34 @@ contract BlockVoting {
         }
     }
 
-
     function closeRegistrationPeriod() public isChairperson {
         candidates_count = candidateAddr.length;
         period = 2;
     }
-    
-    
-    
+
     function CheckNumberOfCandidates() public view returns (uint256) {
         return candidates_count;
     }
-    function CheckNumberOfSeats() public view returns (uint256) {
-        return seats;
-    }
+
     function viewAllCandidates() public view returns (address[] memory) {
         address[] memory FinalList= new address[](candidates_count);
         for (uint256 i = 0; i < candidateAddr.length; i++)
             FinalList[i]=candidateAddr[i];
         return FinalList;
     }
+
+    function ApproveVoters() public isChairperson {
+        require(period == 2, "Candidate Registration period must be over");
+        for (uint256 i = 0; i < VoterRequests.length; i++) {
+            voterAddr.push(VoterRequests[i]);
+            voters[voterAddr[i]].vote = 0;
+            
+            for ( uint256 j=0;j<candidates_count;j++ ){
+                voters[voterAddr[i]].voted.push(false);
+            }
+        }
+    }
+    
 
     function vote(address CandidateVoted) public {
         require(period == 2, "Can't vote currently");

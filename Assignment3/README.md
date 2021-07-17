@@ -18,39 +18,44 @@
 
 * For that select those accounts one by one from the drop down menu above, after selecting an account click on **RequestCandidature** button. 
 
-* Note this will trigger the RequestVotingRights function too, so the candidate need not apply for voting rights seperately.  
+* Note this will trigger the **RequestVotingRights** function too, so the candidate need not apply for voting rights seperately.  
  
  
-### Owner requesting the loan
+### Applying for Voting rights
 
-* Select any other account than the top one from the Account drop down menu.
+* Select accounts 5 and 6, anad click on **RequestVotingRights** function to make them apply for voting rights. 
 
-* Click on the reqLoan button after providing the values of principle, interest, time as integers and click on transact.
+* By clicking on this button twice for the same account, you will see system will tell you that you've already applied for the voting rights before. 
 
-* This would emit a Request event and add the amount in the loans mapping of the contract owner i.e. account 1.
+### Approve candidatures and close registration period
 
-### Getting the owner's balance
+* Chairperson will now approve all the candidatures by clicking on ApproveCandidature button and close the registration period by clicking on closeRegistrationPeriod button. 
 
-* First select any account from the Account drop down menu.
+* You can check now that 3 candidates are there by clicking on CheckNumberOfCandidates button and get the full list by clicking on viewAllCandidates button. 
 
-* Now click on the getOwnerBalance button in the contract.
+### Approve voters
 
-* It will display the owner's current account balance.
+* Once the registration period is over and number of candidates is finalized, the chairperson can approve the voters by clicking on ApproveVoters button.
 
-### View dues
 
-* First select account 1 from the menu because only the owner of contract can use this function.
+### Voting starts! 
 
-* Click on the viewDues button and provide the address of the requestor's account.
+* Select account 5 and make him give his vote to account 3 and 4 by clicking on vote button twice, giving account 3 address as the parameter for the first time and account 4 address as the parameter for the second time. 
 
-* Click on call and you will get the amount of money you owe to that account.
+* Select account 5 and make him give his vote to account 2, 3 and 4 by clicking on vote button thrice, rest is similar as above. You will see you won't be able to cast the third vote to account 4 since the chairperson deployed the voting system for 2 seats only. Hence each person can cast his vote to only 2 people. 
 
-### Settle dues
+* Lastly, make all the candidates give themselves one vote each by following the steps same as above. 
 
-* First select account 1 from the menu because only the owner of contract can use this function.
+* So up till now, 2 votes have been cast to account 2, 3 votes have been cast to account 3 and 2 votes have been cast to account 4. 
 
-* Click on the viewDues button after providing the address of the requestor's account.
+* Now, let's make the account 2 and 3 give each other a vote too. (Reason : They've colluded to make 4 lose (Real Reason: Our system doesn't handle tie cases yet.))
 
 * Click on transact and the loan amount would be transferred to the requestor's account only if there is sufficient balance in the account.
 
+* Now, 3 votes have been cast to account 2, 4 votes have been cast to account 3 and 2 votes have been cast to account 4.
+
+### Counting starts! 
+
+* Now, chairperson will close the voting period by clicking on closeVotingPeriod button 
+* And he will start the counting by clicking on the Count button, which will count the votes and return the list of the selected candidates. 
 
