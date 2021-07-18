@@ -1,5 +1,9 @@
 # Block Voting 
 
+## What is Block Voting 
+
+* In a block voting election, all candidates run against each other for **m** number of positions (m is called **seats** in our code). Each voter selects up to m candidates (voters are sometimes said to have m votes; however, they are unable to vote for the same candidate more than once). Voters are most commonly permitted to cast their votes across more than one party list. The m candidates with the most votes (who may or may not obtain a majority of available votes) are the winners and will fill the positions.
+
 ## Instructions to test the contract
 
 * Open the [Remix IDE](https://remix.ethereum.org/) and create a new *.*sol* file. For steps ahead, we will refer this file by *vote.sol*. 
