@@ -29,20 +29,20 @@
 
 ### Approve candidatures and close registration period
 
-* Chairperson will now approve all the candidatures by clicking on ApproveCandidature button and close the registration period by clicking on closeRegistrationPeriod button. 
+* Chairperson will now approve all the candidatures by clicking on **ApproveCandidature** button and close the registration period by clicking on **closeRegistrationPeriod** button. 
 
-* You can check now that 3 candidates are there by clicking on CheckNumberOfCandidates button and get the full list by clicking on viewAllCandidates button. 
+* You can check now that 3 candidates are there by clicking on **CheckNumberOfCandidates** button and get the full list by clicking on **viewAllCandidates** button. 
 
 ### Approve voters
 
-* Once the registration period is over and number of candidates is finalized, the chairperson can approve the voters by clicking on ApproveVoters button.
+* Once the registration period is over and number of candidates is finalized, the chairperson can approve the voters by clicking on **ApproveVoters** button.
 
 
 ### Voting starts! 
 
-* Select account 5 and make him give his vote to account 3 and 4 by clicking on vote button twice, giving account 3 address as the parameter for the first time and account 4 address as the parameter for the second time. 
+* Select account 5 and make him give his vote to account 3 and 4 by clicking on **vote** button twice, giving account 3 address as the parameter for the first time and account 4 address as the parameter for the second time. 
 
-* Select account 5 and make him give his vote to account 2, 3 and 4 by clicking on vote button thrice, rest is similar as above. You will see you won't be able to cast the third vote to account 4 since the chairperson deployed the voting system for 2 seats only. Hence each person can cast his vote to only 2 people. 
+* Select account 5 and make him give his vote to account 2, 3 and 4 by clicking on **vote** button thrice, rest is similar as above. You will see you won't be able to cast the third vote to account 4 since the chairperson deployed the voting system for 2 seats only. Hence each person can cast his vote to only 2 people. 
 
 * Lastly, make all the candidates give themselves one vote each by following the steps same as above. 
 
@@ -56,7 +56,8 @@
 
 ### Counting starts! 
 
-* Now, chairperson will close the voting period by clicking on closeVotingPeriod button 
-* And he will start the counting by clicking on the Count button, which will count the votes and return the list of the selected candidates. 
+* Now, chairperson will close the voting period by clicking on **closeVotingPeriod** button 
+ 
+* And he will start the counting by clicking on the **Count** button, which will count the votes and return the list of the selected candidates. 
 
 
