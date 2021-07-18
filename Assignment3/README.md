@@ -52,9 +52,7 @@
 
 * So up till now, 2 votes have been cast to account 2, 3 votes have been cast to account 3 and 2 votes have been cast to account 4. 
 
-* Now, let's make the account 2 and 3 give each other a vote too. (Reason : They've colluded to make 4 lose (Real Reason: Our system doesn't handle tie cases yet.))
-
-* Click on transact and the loan amount would be transferred to the requestor's account only if there is sufficient balance in the account.
+* Now, let's make the account 2 and 3 give each other a vote too. (Reason : They've colluded to make 4 lose (Real Reason: Our system doesn't handle tie cases yet)).
 
 * Now, 3 votes have been cast to account 2, 4 votes have been cast to account 3 and 2 votes have been cast to account 4.
 
